@@ -218,12 +218,12 @@ if __name__ == '__main__':
     print("rcp = ", corr_product_op(input, consequent))'''
     control_results = []
 
-    for i in range(0,100,10):
+    for i in range(0,70,10):
         arr = []
-        for j in range(50):
-            arr.append(control_system(j, i,"northwest",intersection, corr_product_op))
+        for j in range(0, 100, 10):
+            arr.append(control_system(i, j,"northwest",intersection, corr_product_op))
         control_results.append(arr)
-    print(control_results[9])
-    plt.plot(control_results[9])
+    print(control_results)
+    plt.plot(control_results)
     plt.show()
 
